@@ -1,14 +1,20 @@
 import styled from "styled-components";
 
+interface HeaderProps {
+  name: string;
+}
+
 const StyledHeader = styled.div`
   width: 100%;
   background-color: gray;
 `;
 
-export default function Header() {
+export default function Header(props: HeaderProps) {
   return (
     <StyledHeader>
-      <span>fabriciocardoso.dev</span>
+      <div>
+        <span>{props.name}</span>
+      </div>
     </StyledHeader>
   );
 }
